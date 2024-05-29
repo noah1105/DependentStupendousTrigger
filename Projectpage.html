@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Button</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+      body {
+        background: url('luke-chesser-IGtutkXikuc-unsplash 1.png');
+        text-align: center;
+      }
+
+      h1,
+      .contact-text {
+        color: white;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      button {
+        width: 200px;
+        height: 100px;
+        background-color: transparent;
+        border: 2px solid #8E4CFD;
+        border-radius: 10px;
+        color: #FFFFFF;
+        font-size: 16px;
+        padding: 10px;
+        background: #271349;
+      }
+
+      .Projects-heading {
+        font-size: 24px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="Projects-heading">Projects I made</div>
+
+    <div class="My Projects">
+      <div class="grid-container">
+        <button
+          onclick="window.location.href='https://e37fd5c1-7a3d-435c-a61a-56e8c2f7cef7-00-1gc8il1z0ygnm.picard.replit.dev'">This
+          is my site about snowboarding</button>
+        <button onclick="window.location.href='https://749d45-3000.csb.app/'">This site lets you log in and upload
+          photos</button>
+        <button
+          onclick="window.location.href='https://www.figma.com/file/9sX5x8t1RhtPwbVGqjbh7X/Untitled?type=whiteboard&node-id=0%3A1&t=D7X7jDg48UwO5Huq-1'">This
+          is my flowchart</button>
+        <button
+          onclick="window.location.href='https://www.figma.com/file/j4e4ianuQdKnJzvE7MOMev/Untitled-(Copy)?type=design&mode=design&t=D7X7jDg48UwO5Huq-1'">This
+          is another figma I made</button>
+        <button onclick="window.location.href='https://example.com'">New Project</button>
+        <button onclick="window.location.href='https://example.com'">New Project</button>
+      </div>
+    </div>
+
+  </body>
+
+  <div class="footer">
+    &copy; Noah's Site 2024
+  </div>
+
+  <!-- blank button -->
+  <!-- <button ondblclick=""></button> -->
+
+  <button class="styled-button" onclick="history.back()">Go Back</button>
+</body>
+
+</html>

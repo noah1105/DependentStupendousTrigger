@@ -1,0 +1,251 @@
+/* This is a comment */
+
+< !DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Contact Me</title>< !-- Linking the external CSS file --><link rel="stylesheet" type="text/css" href="Projectpage.css"></head><body><div class="projects-heading">Projects I made</div><div class="My Projects"><div class="grid-container">< !-- Buttons content here --></div></div><div class="footer">&copy;
+
+Noah's Site 2024
+ </div></body></html>< !DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>My Webpage</title><link rel="stylesheet" type="text/css" href="style.css"><style>html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*background: url('luke-chesser-IGtutkXikuc-unsplash 1.png');*/
+  font-family: Comic Sans MS, cursive, sans-serif;
+  margin: 20px;
+  padding: 10px;
+}
+
+h1,
+.container {
+  text-align: center;
+  color: green;
+  font-size: 24px;
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    /*background: url('luke-chesser-IGtutkXikuc-unsplash 1.png');*/
+    font-family: Comic Sans MS, cursive, sans-serif;
+    margin: 20px;
+    padding: 10px;
+  }
+
+  h1,
+  .container {
+    text-align: center;
+    color: green;
+    font-size: 24px;
+  }
+}
+
+
+/* Add a comment here */
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+.slides {
+  display: block;
+}
+
+.slide {
+  display: none;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+/* This is a single-line comment */
+
+.center-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* Add a comment here */
+
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding-bottom: 50px;
+  /* Add space for the button at the bottom */
+}
+
+.styled-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.styled-button:hover {
+  background-color: #45a049;
+}
+
+
+
+/* This is a comment */
+
+// .image - container img,
+// .image - container a {
+//   width: 250px;
+//   height: 100px;
+//   margin: 10px;
+//   display: block;
+//   text - align: center;
+//   box - sizing: border - box;
+// }
+
+
+// This is a new comment
+// document.getElementById("noah") . innerHTML = "my name is Noah!!" 
+
+
+
+// This is the new comment
+
+let slideIndex=1;
+showSlides(slideIndex);
+
+function moveSlides(n) {
+  showSlides(slideIndex +=n);
+}
+
+function showSlides(n) {
+  let slides=document.getElementsByClassName("slide");
+
+  if (n > slides.length) {
+    slideIndex=1;
+  }
+
+  if (n < 1) {
+    slideIndex=slides.length;
+  }
+
+  for (let i=0; i < slides.length; i++) {
+    slides[i].style.display="none";
+  }
+
+  slides[slideIndex - 1].style.display="block";
+}
+
+// This is the new comment
+
+function showPhotos() {
+  console.log("This is a photo!");
+
+  const outputContainer=document.createElement("div");
+  outputContainer.textContent="This is a photo!";
+  document.body.appendChild(outputContainer);
+}
+
+const button=document.createElement("button");
+button.textContent="Photos";
+button.addEventListener("click", showPhotos);
+
+document.body.appendChild(button);
+
+// This is the new comment
+
+function complexConditionEvaluation(value1, value2, value3) {
+  if ((value1 > 5 && value2 < 10) || value3==="example") {
+    console.log("Complex condition met!");
+  }
+
+  else {
+    console.log("New update.");
+  }
+}
+
+complexConditionEvaluation(7, 8, "example");
+
+
+
+/* This is another comment */
+
+body {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.navbar {
+  background-color: #B6D0E2;
+}
+
+.navbar a {
+  color: #002e8a;
+}
+
+.footer {
+  background-color: #489efd;
+}
+
+  body {
+    background-color: #f0f0f0;
+    color: #000;
+  }
+
+  .navbar {
+    background-color: #B6D0E2;
+  }
+
+  .navbar a {
+    color: #002e8a;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #489efd;
+    padding: 10px;
+    color: white;
+  }
+
+  .footer p {
+    margin: 0;
+  }
