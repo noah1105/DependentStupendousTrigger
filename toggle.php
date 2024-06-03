@@ -1,26 +1,22 @@
 <?php
-// Variables of different data types
 $theme = isset($_COOKIE['theme']) ? $_COOKIE['theme'] : 'style.css';
 $timestamp = time();
 $isDarkMode = $theme === 'style-dark.css';
 
-// Decision structure based on theme
 if ($isDarkMode) {
     $greeting = "Good evening, user!";
 } else {
     $greeting = "Good morning, user!";
 }
 
-// Function to get formatted timestamp
 function getFormattedTimestamp($timestamp) {
     return date("Y-m-d H:i:s", $timestamp);
 }
 
-// Array of messages
-$messages = array("Welcome to the site!", "Enjoy your stay!", "Have a great day!");
+$messages = array("new");
 
 ?>
-
+   
 <!DOCTYPE html>
 <html lang="en">
 <head>
