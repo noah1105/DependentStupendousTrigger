@@ -1,3 +1,11 @@
+
+
+
+
+
+// New line
+
+
 document.addEventListener('DOMContentLoaded', function() {
   const toggleButton = document.getElementById('toggle-button');
 
@@ -17,3 +25,13 @@ function getCookie(name) {
   let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
   if (match) return match[2];
 }
+
+
+// ... other JavaScript code ... 
+
+function moveSlides(n) {
+    let slides = document.getElementsByClassName("slide");
+    // ... rest of your moveSlides function ...
+}
+
+// ... other JavaScript code ...

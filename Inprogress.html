@@ -2,91 +2,115 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Styled Button</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light/Dark Mode and Slideshow</title>
+    <link id="theme-stylesheet" rel="stylesheet" href="style.css">
+    <style>
+        .slide {
+            display: none;
+        }
+
+        .slide.active {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
-  <!-- Your page content here -->
+    <!-- Button to toggle between light and dark mode -->
+    <button id="toggle-button">Toggle Light/Dark Mode</button>
 
-  <!DOCTYPE html>
-  <html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carousel</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-
-
-  <body>
-    <div class="slideshow-container">
-      <div class="slides">
-        <img src="Photo 1.jpg" class="slide normal-size">
-        <img src="photo 2 .jpg" class="slide normal-size">
-        <img src="photo 3.jpg" class="slide normal-size">
-      </div>
-      <button class="prev" onclick="moveSlides(-1)">&#10094;</button>
-      <button class="next" onclick="moveSlides(1)">&#10095;</button>
+    <!-- Slideshow container -->
+    <div class="slideshow">
+        <!-- Each slide contains an image -->
+        <div class="slide"><img src="Photo 1.jpg" alt="Photo 1"></div>
+        <div class="slide"><img src="photo 2 .jpg" alt="Photo 2"></div>
+        <div class="slide"><img src="photo 3.jpg" alt="Photo 3"></div>
+        <!-- Buttons to navigate through slides -->
+        <button id="prev-button">Previous</button>
+        <button id="next-button">Next</button>
     </div>
-    <script src="script.js"></script>
-  </body>
 
-  </html>
+    <!-- Button to show photo message -->
+    <button id="photos-button">Show Photo Message</button>
 
-  <!DOCTYPE html>
-  <html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carousel</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-
-  <body>
-    <div class="slideshow-container">
-      <div class="slides">
-        <img src="Photo 1.jpg" class="slide normal-size">
-        <img src="photo 2 .jpg" class="slide normal-size">
-        <img src="photo 3.jpg" class="slide normal-size">
-      </div>
-      <button class="toggle-button" onclick="showPhotos()">Show Photos</button>
-    </div>
-    <script src="script.js"></script>
     <script>
-      function showPhotos() {
-        console.log("This is a photo!");
-      }
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.getElementById('toggle-button');
+            const currentTheme = getCookie('theme') || 'style.css';
+            document.getElementById('theme-stylesheet').setAttribute('href', currentTheme);
+
+            toggleButton.addEventListener('click', function () {
+                const currentTheme = document.getElementById('theme-stylesheet').getAttribute('href');
+                const newTheme = currentTheme === 'style.css' ? 'style-dark.css' : 'style.css';
+                document.getElementById('theme-stylesheet').setAttribute('href', newTheme);
+                document.cookie = "theme=" + newTheme + "; path=/";
+            });
+
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            document.getElementById('prev-button').addEventListener('click', function () {
+                moveSlides(-1);
+            });
+
+            document.getElementById('next-button').addEventListener('click', function () {
+                moveSlides(1);
+            });
+
+            function moveSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function showSlides(n) {
+                let slides = document.getElementsByClassName("slide");
+
+                if (n > slides.length) {
+                    slideIndex = 1;
+                }
+                if (n < 1) {
+                    slideIndex = slides.length;
+                }
+
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].classList.remove('active');
+                }
+
+                slides[slideIndex - 1].classList.add('active');
+            }
+
+            function showPhotos() {
+                console.log("This is a photo!");
+
+                const outputContainer = document.createElement("div");
+                outputContainer.textContent = "This is a photo!";
+                document.body.appendChild(outputContainer);
+            }
+
+            const photosButton = document.getElementById("photos-button");
+            photosButton.addEventListener("click", showPhotos);
+        });
+
+        function getCookie(name) {
+            let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+            if (match) return match[2];
+        }
+
+        function complexConditionEvaluation(value1, value2, value3) {
+            if ((value1 > 5 && value2 < 10) || value3 === "example") {
+                console.log("Complex condition met!");
+            } else {
+                console.log("New update.");
+            }
+        }
+
+        complexConditionEvaluation(7, 8, "example");
     </script>
-  </body>
-
-  </html>
-
-
-  <!-- This is a new comment -->
-
-  <!DOCTYPE html>
-  <html>
-
-  <body>
-
-    <h1> Here are some photos I have taken.</h1>
-
-    <footer>
-      <p>photos by<br>
-        <a>Noah</a>
-      </p>
-    </footer>
-
-  </body>
-
-  </html>
-
-  <button class="styled-button" onclick="history.back()">Go Back</button>
 </body>
 
 </html>
+
+
+  <button class="styled-button" onclick="history.back()">Go Back</button>
+</body>

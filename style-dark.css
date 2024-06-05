@@ -12,14 +12,10 @@ body {
 }
 
 .footer {
-  background-color: #222;
-}
-
-.footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #489efd;
+  background-color: #222;
   padding: 10px;
   color: white;
 }
